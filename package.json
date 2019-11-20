@@ -2,14 +2,39 @@
 	"name": "@qruzz/ens",
 	"version": "0.0.1",
 	"description": "An opinionated utility CLI providing a simple and coherent API for interfacing with common tools",
-	"license": "MIT",
+	"keywords": [
+		"typescript",
+		"cli",
+		"kubernetes"
+	],
 	"author": {
 		"name": "Michael Nissen",
 		"email": "michael@plural.ai"
 	},
+	"license": "MIT",
 	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"directories": {
+		"bin": "bin",
+		"src": "src"
+	},
+	"files": [
+		"lib/**/*",
+		"README.md",
+		"package.json"
+	],
 	"bin": {
 		"ens": "./bin/ens"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:qruzz/ens.git"
+	},
+	"bugs": {
+		"url": "https://github.com/qruzz/ens/issues"
 	},
 	"scripts": {
 		"start": "ts-node-dev ./src/index.ts",
