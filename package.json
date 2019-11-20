@@ -1,0 +1,35 @@
+{
+	"name": "@qruzz/ens",
+	"version": "0.0.1",
+	"description": "An opinionated utility CLI providing a simple and coherent API for interfacing with common tools",
+	"license": "MIT",
+	"author": {
+		"name": "Michael Nissen",
+		"email": "michael@plural.ai"
+	},
+	"main": "./lib/index.js",
+	"bin": {
+		"ens": "./bin/ens"
+	},
+	"scripts": {
+		"start": "ts-node-dev ./src/index.ts",
+		"execute": "yarn build && ens",
+		"build": "yarn clean && tsc",
+		"clean": "rm -rf ./lib",
+		"install-cli": "npm i -g && ens"
+	},
+	"devDependencies": {
+		"@types/inquirer": "^6.5.0",
+		"@types/node": "^12.12.9",
+		"@types/yargs": "^13.0.3",
+		"prettier": "^1.19.1",
+		"ts-node-dev": "^1.0.0-pre.44",
+		"typescript": "^3.7.2"
+	},
+	"dependencies": {
+		"@kubernetes/client-node": "^0.11.0",
+		"esm": "^3.2.25",
+		"inquirer": "^7.0.0",
+		"yargs": "^15.0.2"
+	}
+}
