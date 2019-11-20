@@ -41,13 +41,17 @@
 		"execute": "yarn build && ens",
 		"build": "yarn clean && tsc",
 		"clean": "rm -rf ./lib",
-		"install-cli": "npm i -g && ens"
+		"install-cli": "npm i -g && ens",
+		"test": "jest"
 	},
 	"devDependencies": {
 		"@types/inquirer": "^6.5.0",
+		"@types/jest": "^24.0.23",
 		"@types/node": "^12.12.9",
 		"@types/yargs": "^13.0.3",
+		"jest": "^24.9.0",
 		"prettier": "^1.19.1",
+		"ts-jest": "^24.1.0",
 		"ts-node-dev": "^1.0.0-pre.44",
 		"typescript": "^3.7.2"
 	},
